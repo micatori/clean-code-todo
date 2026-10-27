@@ -95,9 +95,15 @@ const attachTaskEventHandlers = function (taskListItem, checkBoxEventHandler) {
 };
 
 for (let i = 0; i < incompleteTaskHolder.children.length; i++) {
-  attachTaskEventHandlers(incompleteTaskHolder.children[i], moveTaskToCompleted);
+  attachTaskEventHandlers(
+    incompleteTaskHolder.children[i],
+    moveTaskToCompleted,
+  );
 }
 
 for (let i = 0; i < completedTasksHolder.children.length; i++) {
-  attachTaskEventHandlers(completedTasksHolder.children[i], moveTaskToIncomplete);
+  attachTaskEventHandlers(
+    completedTasksHolder.children[i],
+    moveTaskToIncomplete,
+  );
 }
